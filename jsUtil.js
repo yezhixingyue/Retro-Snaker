@@ -25,7 +25,7 @@ var tool = {
                 if(typeof instance == 'object') {
                     return instance
                 }
-                origin && origin.apply(this,origin);
+                origin && origin.apply(this,arguments);
                 instance = this;
             }
         }());

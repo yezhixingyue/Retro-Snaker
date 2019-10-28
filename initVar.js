@@ -13,11 +13,12 @@ var BASE_Y_POINT = 100;
 var INTERVAL = 300;
 
 
-function Square(x,y,width,height) {
+function Square(x,y,width,height,dom) {
     this.x = x;
     this.y = y;
     this.width = width;
-    this.height = height
+    this.height = height;
+    this.viewContent = dom || document.createElement('div');
 }
 Square.prototype.touch = function () {
     console.log('touch')
@@ -28,5 +29,13 @@ var Stone = tool.extends(Square);
 var Food = tool.single(Square);
 var SnakeHead = tool.single(Square);
 var SnakeBody = tool.extends(Square);
+var Snake = tool.single();
 var Ground = tool.single(Square);
 
+
+//触及方法的枚举
+var TouchEventEnum = {
+    Move: 'Move',
+    EAT: 'Eat',
+    DEAD: 'Dead'
+}
