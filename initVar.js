@@ -11,6 +11,8 @@ var BASE_Y_POINT = 100;
 
 //定义蛇的移动时间间隔
 var INTERVAL = 300;
+var GAMESTORE = 0;
+var FloorColor = 'orange'
 
 
 function Square(x,y,width,height,dom) {
@@ -26,11 +28,12 @@ Square.prototype.touch = function () {
 
 var Floor = tool.extends(Square);
 var Stone = tool.extends(Square);
-var Food = tool.single(Square);
-var SnakeHead = tool.single(Square);
+var Food = tool.extends(Square);
+var SnakeHead = tool.extends(Square);
 var SnakeBody = tool.extends(Square);
 var Snake = tool.single();
 var Ground = tool.single(Square);
+var Game = tool.single();
 
 
 //触及方法的枚举

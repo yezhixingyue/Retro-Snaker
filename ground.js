@@ -15,7 +15,7 @@ oGround.init = function () {
             if(y == 0 || y == YLEN - 1 || x == 0 || x == XLEN -1) {
                 var newSquare = SquareFactory.create('Stone',x,y,'#000')
             } else {
-                var newSquare = SquareFactory.create('Floor',x,y,'orange')
+                var newSquare = SquareFactory.create('Floor',x,y,FloorColor)
             }
 
             this.viewContent.appendChild(newSquare.viewContent);

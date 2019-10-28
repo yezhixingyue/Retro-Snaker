@@ -33,7 +33,7 @@ SquareFactory.prototype.Floor = function (x,y,color) {
 
 SquareFactory.prototype.Stone = function (x,y,color) {
     var oStone = new Stone(x,y,SQUAREWIDTH,SQUAREWIDTH);
-    this.init(oStone,color,TouchEventEnum.Move);
+    this.init(oStone,color,TouchEventEnum.DEAD);
     return oStone
 }
 
